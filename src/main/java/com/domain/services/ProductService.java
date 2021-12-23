@@ -3,6 +3,7 @@ package com.domain.services;
 import com.domain.model.entities.Product;
 import com.domain.model.repos.ProductRepo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class ProductService {
     
+    @Autowired
     private ProductRepo productRepo;
 
     public Product save(Product product) {
